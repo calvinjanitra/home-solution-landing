@@ -2,7 +2,11 @@
     padding: 0;
     margin: 0;
 }
-
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
 html {
     scroll-behavior: smooth;
 }
@@ -29,39 +33,89 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-left: 100px;
+    margin-left: 50px;
     margin-right: 150px;
     font-size: x-large;
+    /* border: 1px solid red; */
 }
-.homesol {
+.navbar .homesol {
+    /* border: 1px solid red; */
     font-family: 'Archivo Black', sans-serif;
     display: flex;
+    flex-direction: row;
     column-gap: 15px;
+    row-gap: 30px;
+    align-items: center;
+}
+.homesol i {
+    /* background-color: white; */
+    padding: 10px;
+    border-radius: 50%;
+}
+.homesol i:hover {
+    background-color: #d9d9d9;
+    color: rgb(28, 107, 111);
+    scale: 1.1;
+    transition: all;
+    transition-duration: 0.3s;
+}
+.login {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Archivo', sans-serif;
+}
+.login .log {
+    color: rgb(28, 107, 111);
+    font-family: 'Archivo', sans-serif;
+    font-size: 1.2rem;
+}
+.login .regist {
+    color: rgb(28, 107, 111);
+    font-family: 'Archivo', sans-serif;
+    font-size: 1.2rem;
+}
+
+/* button middle */
+.navbar button {
+    background-color: #e7eefc;
+    margin-left: 4px;
+    padding: 10px;
+    font-family: 'Archivo', sans-serif;
+    color: white;
+    border: none;
 }
 
 .button {
     display: flex;
     flex-direction: row;
-    font-family: 'Archivo Black', sans-serif;
+    font-family: 'Archivo', sans-serif;
 }
+
 .button ul {
     display: flex;
     justify-content: space-between;
     list-style: none;
     column-gap: 25px;
 }
-.button span {
-    text-decoration: underline;
+.button .active {
+    border-bottom: 3px solid white;
+    padding-bottom: 4px;
+    text-decoration: none;
 }
-a {
+.button a {
+    /* border-bottom: 3px solid white; */
+    /* border: 1px solid red; */
+    padding-bottom: 4px;
     text-decoration: none;
     color: white;
 }
 
 .button a:hover {
     color: rgb(28, 107, 111);
-    text-decoration: underline;
+    border-bottom: 3px solid rgb(28, 107, 111);
     transition: all;
+    transition-duration: 0.3s;
 }
 
 /* banner */
@@ -96,6 +150,11 @@ a {
     /* border: 1px solid yellow; */
     justify-self: end;
 }
+
+/* .banner .socmed {
+    border: 1px solid red;
+} */
+
 .left .txt {
     background-color: rgba(217, 217, 217, 0.7);
     font-size: 2.4rem;
@@ -135,11 +194,11 @@ a {
 }
 
 .stat {
-    padding-top: 5px;
-    padding-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 30px;
     margin-top: 245px;
     /* border: 1px solid yellow; */
-    height: 100px;
+    height: 120px;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -180,11 +239,14 @@ a {
 }
 
 /* about us */
-.about .container {
+.about {
     width: 100%;
     margin-top: 100px;
-    /* padding: 20px; */
+    /* border: 1px solid yellow; */
+}
+.container {
     /* border: 1px solid red; */
+    padding-left: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
